@@ -1,0 +1,7 @@
+h1. Install
+
+git clone git://github.com:twhitchu/vimfiles.git ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
+
+
+MIT License &copy; 2009 Tom Whitchurch
