@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/tomwhitchurch/Documents/projects/audi/ngw/ims/doc'
+let g:netrw_dirhist_2='/Users/tomwhitchurch/Documents/projects/audi/ngw/ims/app/views/next_gen'
+let g:netrw_dirhist_3='/Users/tomwhitchurch/Documents/projects/audi/ngw/ims/app/views/next_gen/searches'
+let g:netrw_dirhist_4='/Users/tomwhitchurch/Documents/projects/audi/ngw/ims'
+let g:netrw_dirhist_5='/Users/tomwhitchurch/Documents/projects/audi/ngw/ims/app'
