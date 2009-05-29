@@ -3,6 +3,9 @@
 " Change <Leader>
   let mapleader = ","
  
+" set hidden to not loose undo history
+  set hidden
+ 
 " Set temporary directory (don't litter local dir with swp/tmp files)
   set directory=/tmp/
  
@@ -99,7 +102,6 @@
     botright new
  
     setlocal buftype=nofile
-    setlocal bufhidden=delete
     setlocal nobuflisted
     setlocal noswapfile
     setlocal nowrap
