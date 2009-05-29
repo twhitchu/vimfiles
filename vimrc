@@ -4,7 +4,7 @@
   let mapleader = ","
  
 " set hidden to not loose undo history
-  set hidden
+  "set hidden
  
 " Set temporary directory (don't litter local dir with swp/tmp files)
   set directory=/tmp/
@@ -181,6 +181,7 @@
   nmap <F2> :NERDTreeToggle<CR>
  
 " NERDComment {{{
+  let NERDTreeShowLineNumbers=1
   let NERDShutUp = 1
   " bind command-/ to toggle comment
   " requires NERD Commenter to be installed: http://www.vim.org/scripts/script.php?script_id=1218
