@@ -53,6 +53,7 @@
 " * Search & Replace
  
 " show the `best match so far' as search strings are typed:
+  set hlsearch
   set incsearch
  
 " assume the /g flag on :s substitutions to replace all matches in a line:
@@ -87,6 +88,25 @@
   nmap <leader>tn :tabnext<CR>
   nmap <leader>tp :tabprevious<CR>
   nmap <leader>te :tabedit
+  
+"jump to last cursor position when opening a file
+"dont do it when writing a commit log entry
+  autocmd BufReadPost * call SetCursorPosition()
+  function! SetCursorPosition()
+      if &filetype !~ 'commit\c'
+          if line("'\"") > 0 && line("'\"") <= line("$")
+              exe "normal g`\""
+          endif
+      end
+  endfunction
+
+" Catch trailing whitespace ,s
+  set listchars=tab:>-,trail:·,eol:$
+  nmap <silent> <leader>s :set nolist!<CR>
+
+  " ack
+  set grepprg=ack
+  set grepformat=%f:%l:%m
  
 " Remap F1 from Help to ESC. No more accidents
   nmap <F1> <Esc>
@@ -168,6 +188,7 @@
   let Tlist_Use_Right_Window = 1
   let Tlist_Exit_OnlyWindow = 1 "Exit if only the taglist is open
   let Tlist_File_Fold_Auto_Close = 1 " Only auto expand the current file
+  let Tlist_Ctags_Cmd = '/opt/local/bin/ctags'
   nmap <F3> :TlistToggle<CR>
   nmap <F4> :BufExplorer<CR>
   nmap <F5> :bw<CR>
@@ -202,6 +223,17 @@
   autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
   autocmd FileType c set omnifunc=ccomplete#Complete
+
+" theme
+set background=dark
+if has("gui_running")
+  colorscheme slate
+  set columns=101 lines=60
+  set transparency=8
+endif
+
+set guifont=PanicSans:h15
+set guioptions=egmrLt
  
 " load user settings
   runtime user_settings.vim
