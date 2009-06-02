@@ -2,9 +2,16 @@
  
 " Change <Leader>
   let mapleader = ","
+
+" mini buffer explorer shiz
+  let g:miniBufExplMapWindowNavVim = 1
+  let g:miniBufExplMapWindowNavArrows = 1
+  let g:miniBufExplMapCTabSwitchBufs = 1
+  let g:miniBufExplModSelTarget = 1 
  
 " set hidden to not loose undo history
-  "set hidden
+  set hidden
+  "set bufhidden
  
 " Set temporary directory (don't litter local dir with swp/tmp files)
   set directory=/tmp/
@@ -103,6 +110,7 @@
  
     setlocal buftype=nofile
     setlocal nobuflisted
+    setlocal bufhidden=delete
     setlocal noswapfile
     setlocal nowrap
     setlocal filetype=shell
