@@ -206,7 +206,7 @@
   let NERDTreeHighlightCursorline = 1
   let NERDTreeShowBookmarks = 1
   let NERDTreeShowHidden = 1
-  let NERDTreeIgnore = ['.vim$', '\~$', '.svn$', '.git$']
+  let NERDTreeIgnore = ['.vim$', '\~$', '.svn$', '.git$', '.DS_Store']
   nmap <F2> :NERDTreeToggle<CR>
  
 " NERDComment {{{
