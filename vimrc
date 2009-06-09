@@ -240,8 +240,21 @@ if has("gui_running")
   set transparency=8
 endif
 
-set guifont=PanicSans:h15
 set guioptions=egmrLt
+
+" Window size appearance
+augroup guiappearance
+  au!
+  :map <F9> :set lines+=5<CR>
+  :map <S-F9> :set lines-=5<CR>
+  :map <C-F9> :set lines=60<CR>
+  :map <M-F9> :set lines=30<CR>
+  :map <F8> :set columns+=10<CR>
+  :map <S-F8> :set columns-=10<CR>
+  :map <C-F8> :set columns=132<CR>
+  :map <M-F8> :set columns=80<CR>
+augroup END
+
  
 " load user settings
   runtime user_settings.vim
